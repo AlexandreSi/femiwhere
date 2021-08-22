@@ -1,0 +1,23 @@
+{
+  "name": "femiwhere",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": "",
+  "license": "MIT",
+  "author": "Alexandre Sapet",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.10.21",
+    "@amcharts/amcharts4-geodata": "^4.1.21",
+    "jquery": "^3.6.0",
+    "pubsub-js": "^1.9.3"
+  }
+}
