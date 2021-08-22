@@ -99,4 +99,11 @@ export const zoomOnTrajectory = (chart, feminist) => {
       test.southest - latitudeEpsilon,
       test.westest + longitudeEpsilon,
   )
+  let lineSeries = chart.series.push(new am4maps.MapArcSeries());
+  lineSeries.data = [{
+    "multiGeoLine": [
+      feminist.trajectory
+    ]
+  }];
+  lineSeries.mapLines.template.line.controlPointDistance = 0.3;
 }
