@@ -9,3 +9,7 @@
 #time {
   width: 100%;
 }
+
+#description > a {
+  display: none;
+}

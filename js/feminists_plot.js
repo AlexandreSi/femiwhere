@@ -6,17 +6,27 @@ export default class FeministsPlot {
     this.chart = chart;
     this.feminists = feminists;
     this.feministsOnYearView = drawFeminists(chart, feminists);
-    PubSub.subscribe('time', this.updateYearView.bind(this))
-    PubSub.subscribe('map', this.focusOnFeminist.bind(this))
+    this.currentFocus = null;
+    this.currentYear = null;
+    PubSub.subscribe('time', this.onTimeEvent.bind(this))
+    PubSub.subscribe('map', this.onMapEvent.bind(this))
   }
 
-  static byYearComparison(year) {
-    const parsedYear = parseInt(year)
-    return feminist => (feminist.birthYear <= parsedYear) && (feminist.deathYear >= parsedYear)
+  byYearComparison() {
+    return feminist => (feminist.birthYear <= this.currentYear) && (feminist.deathYear >= this.currentYear)
   }
 
-  updateYearView(queue, year) {
-    const feministsToDraw = this.feminists.filter(FeministsPlot.byYearComparison(year))
+  setCurrentYear(year) {
+    this.currentYear = parseInt(year);
+  }
+
+  onTimeEvent(queue, year) {
+    this.setCurrentYear(year);
+    this.plotFeministsForCurrentYear();
+  }
+
+  plotFeministsForCurrentYear() {
+    const feministsToDraw = this.feminists.filter(this.byYearComparison())
     this.feministsOnYearView.map(element => {
       if (feministsToDraw.indexOf(element.feminist) >= 0) {
         element.appear(200)
@@ -26,13 +36,21 @@ export default class FeministsPlot {
     })
   }
 
-  focusOnFeminist(queue, data) {
+  onMapEvent(queue, data) {
     if (data.event === 'focus') {
       const feministToFocus = data.object;
       this.feministsOnYearView.map(element => element.hide(400))
       console.log(feministToFocus.trajectory)
-      drawTrajectory(this.chart, feministToFocus)
+      this.currentFocus = drawTrajectory(this.chart, feministToFocus)
       zoomOnTrajectory(this.chart, feministToFocus)
+    } else if (data.event === 'backToGlobalView') {
+      this.chart.goHome();
+      this.currentFocus.map(series => {
+        this.chart.series.removeIndex(
+            this.chart.series.indexOf(series)
+        ).dispose();
+      })
+      this.plotFeministsForCurrentYear();
     }
   }
 }

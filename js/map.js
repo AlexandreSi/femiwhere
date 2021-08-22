@@ -74,7 +74,15 @@ export const drawFeminists = (chart, feminists) => {
 
 export const drawTrajectory = (chart, feminist) => {
   let imageSeries = chart.series.push(new am4maps.MapImageSeries());
-  return feminist.trajectory.map(location => creationLocationPoint(imageSeries, location))
+  feminist.trajectory.map(location => creationLocationPoint(imageSeries, location))
+  let lineSeries = chart.series.push(new am4maps.MapArcSeries());
+  lineSeries.data = [{
+    "multiGeoLine": [
+      feminist.trajectory
+    ]
+  }];
+  lineSeries.mapLines.template.line.controlPointDistance = 0.3;
+  return [imageSeries, lineSeries]
 }
 
 export const zoomOnTrajectory = (chart, feminist) => {
@@ -99,11 +107,4 @@ export const zoomOnTrajectory = (chart, feminist) => {
       test.southest - latitudeEpsilon,
       test.westest + longitudeEpsilon,
   )
-  let lineSeries = chart.series.push(new am4maps.MapArcSeries());
-  lineSeries.data = [{
-    "multiGeoLine": [
-      feminist.trajectory
-    ]
-  }];
-  lineSeries.mapLines.template.line.controlPointDistance = 0.3;
 }
