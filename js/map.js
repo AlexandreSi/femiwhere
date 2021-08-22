@@ -9,7 +9,6 @@ export const createChart = () => {
     "map-div",
     am4maps.MapChart
   );
-  chart.maxZoomLevel = 1;
   chart.projection = new am4maps.projections.Miller();
   chart.geodata = am4geodata_worldLow
 
@@ -50,7 +49,54 @@ const createImage = (imageSeries, feminist) => {
   return mapImage;
 }
 
+const creationLocationPoint = (imageSeries, location) => {
+  const mapImage = imageSeries.mapImages.create();
+  mapImage.latitude = location.latitude;
+  mapImage.longitude = location.longitude;
+
+  const circle = mapImage.createChild(am4core.Circle)
+  circle.radius = 4;
+  circle.focusable = true;
+  circle.fill = am4core.color("#B27799");
+  circle.stroke = am4core.color("#FFFFFF");
+  circle.strokeWidth = 2;
+  circle.nonScaling = true;
+  circle.title = `${location.title} (${location.year})`;
+
+  circle.tooltipText = "{title}";
+  return mapImage;
+}
+
 export const drawFeminists = (chart, feminists) => {
   let imageSeries = chart.series.push(new am4maps.MapImageSeries());
   return feminists.map(feminist => createImage(imageSeries, feminist))
+}
+
+export const drawTrajectory = (chart, feminist) => {
+  let imageSeries = chart.series.push(new am4maps.MapImageSeries());
+  return feminist.trajectory.map(location => creationLocationPoint(imageSeries, location))
+}
+
+export const zoomOnTrajectory = (chart, feminist) => {
+  const test = feminist.trajectory.reduce((acc, location) => {
+    return {
+      northest: Math.max(acc.northest, location.latitude),
+      eastest: Math.max(acc.eastest, location.longitude),
+      westest: Math.min(acc.westest, location.longitude),
+      southest: Math.min(acc.southest, location.latitude),
+    }
+  }, {
+    northest: feminist.trajectory[0].latitude,
+    eastest: feminist.trajectory[0].longitude,
+    westest: feminist.trajectory[0].longitude,
+    southest: feminist.trajectory[0].latitude,
+  })
+  const latitudeEpsilon = Math.abs(test.northest - test.southest) * 0.5;
+  const longitudeEpsilon = Math.abs(test.eastest - test.westest) * 0.5;
+  chart.zoomToRectangle(
+      test.northest + latitudeEpsilon,
+      test.eastest + longitudeEpsilon,
+      test.southest - latitudeEpsilon,
+      test.westest + longitudeEpsilon,
+  )
 }
