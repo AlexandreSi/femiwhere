@@ -14,9 +14,9 @@ export default class FeministsPlot {
     const feministsToDraw = this.feminists.filter(feminist => (feminist.birthYear <= parsedYear) && (feminist.deathYear >= parsedYear))
     this.mapElements.map(element => {
       if ((element.feminist.birthYear <= parsedYear) && (element.feminist.deathYear >= parsedYear)) {
-        element.appear()
+        element.appear(200)
       } else {
-        element.hide()
+        element.hide(400)
       }
     })
   }
