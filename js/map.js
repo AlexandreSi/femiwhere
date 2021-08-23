@@ -1,6 +1,6 @@
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
-import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
+import am4geodata_worldHigh from "@amcharts/amcharts4-geodata/worldHigh";
 import PubSub from "pubsub-js";
 
 export const createChart = () => {
@@ -10,7 +10,7 @@ export const createChart = () => {
     am4maps.MapChart
   );
   chart.projection = new am4maps.projections.Miller();
-  chart.geodata = am4geodata_worldLow
+  chart.geodata = am4geodata_worldHigh
 
   let polygonSeries = new am4maps.MapPolygonSeries();
   polygonSeries.useGeodata = true;
@@ -26,6 +26,8 @@ export const createChart = () => {
   let hs = polygonTemplate.states.create("hover");
   hs.properties.fill = am4core.color("#367B25");
 
+  chart.events.on('ready', () => PubSub.publish('start'))
+
   return chart;
 }
 
@@ -34,6 +36,7 @@ const createImage = (imageSeries, feminist) => {
   mapImage.latitude = feminist.trajectory[0].latitude;
   mapImage.longitude = feminist.trajectory[0].longitude;
   mapImage.feminist = feminist
+  mapImage.showOnInit = false;
 
   const circle = mapImage.createChild(am4core.Circle)
   circle.radius = 4;

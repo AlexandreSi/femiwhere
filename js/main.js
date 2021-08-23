@@ -1,7 +1,6 @@
 import FeministsPlot from "./feminists_plot";
 import Feminist from "./feminist";
 import { createChart } from "./map";
-
 import "./description";
 import "./slider";
 
@@ -45,7 +44,5 @@ const feminists = [];
 
 feminists.push(virginiaWoolf, elenaLagadinova);
 
-
 const chart = createChart();
 const feministsPlot = new FeministsPlot(chart, feminists);
-

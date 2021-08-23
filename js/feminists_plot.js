@@ -7,7 +7,7 @@ export default class FeministsPlot {
     this.feminists = feminists;
     this.feministsOnYearView = drawFeminists(chart, feminists);
     this.currentFocus = null;
-    this.currentYear = null;
+    this.currentYear = -9999;
     PubSub.subscribe('time', this.onTimeEvent.bind(this))
     PubSub.subscribe('map', this.onMapEvent.bind(this))
   }
@@ -40,7 +40,6 @@ export default class FeministsPlot {
     if (data.event === 'focus') {
       const feministToFocus = data.object;
       this.feministsOnYearView.map(element => element.hide(400))
-      console.log(feministToFocus.trajectory)
       this.currentFocus = drawTrajectory(this.chart, feministToFocus)
       zoomOnTrajectory(this.chart, feministToFocus)
     } else if (data.event === 'backToGlobalView') {

@@ -6,7 +6,11 @@ class Slider {
     this.slider = $("#time");
     this.yearDisplay = $("#year-display")
     this.slider.on('input', (event) => this.onChangeYear(event.target.value))
-    this.slider.trigger('input');
+    PubSub.subscribe('start', this.onChartReady.bind(this))
+  }
+
+  onChartReady() {
+    this.slider.trigger('input')
   }
 
   onChangeYear(year) {
