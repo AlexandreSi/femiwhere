@@ -1,5 +1,4 @@
 import PubSub from 'pubsub-js';
-import $ from 'jquery'
 
 class Description {
   constructor() {
