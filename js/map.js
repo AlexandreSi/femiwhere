@@ -89,7 +89,7 @@ export const drawTrajectory = (chart, feminist) => {
 }
 
 export const zoomOnTrajectory = (chart, feminist) => {
-  const test = feminist.trajectory.reduce((acc, location) => {
+  const boundaries = feminist.trajectory.reduce((acc, location) => {
     return {
       northest: Math.max(acc.northest, location.latitude),
       eastest: Math.max(acc.eastest, location.longitude),
@@ -102,12 +102,14 @@ export const zoomOnTrajectory = (chart, feminist) => {
     westest: feminist.trajectory[0].longitude,
     southest: feminist.trajectory[0].latitude,
   })
-  const latitudeEpsilon = Math.abs(test.northest - test.southest) * 0.5;
-  const longitudeEpsilon = Math.abs(test.eastest - test.westest) * 0.5;
+  const latitudeEpsilon = Math.abs(boundaries.northest - boundaries.southest) * 0.05;
+  const longitudeEpsilon = Math.abs(boundaries.eastest - boundaries.westest) * 0.05;
   chart.zoomToRectangle(
-      test.northest + latitudeEpsilon,
-      test.eastest + longitudeEpsilon,
-      test.southest - latitudeEpsilon,
-      test.westest + longitudeEpsilon,
+      boundaries.northest + latitudeEpsilon,
+      boundaries.eastest + longitudeEpsilon,
+      boundaries.southest - latitudeEpsilon,
+      boundaries.westest - longitudeEpsilon,
+      undefined,
+      true
   )
 }
