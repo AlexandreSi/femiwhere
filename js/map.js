@@ -11,6 +11,8 @@ export const createChart = () => {
   );
   chart.projection = new am4maps.projections.Miller();
   chart.geodata = am4geodata_worldHigh
+  chart.maxZoomLevel = 512;
+  chart.zoomEasing = am4core.ease.linear;
 
   let polygonSeries = new am4maps.MapPolygonSeries();
   polygonSeries.useGeodata = true;
