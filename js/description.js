@@ -35,7 +35,15 @@ class Description {
       this.focusButton.show();
       this.name.text(this.feminist.name);
       this.references.html('');
-      this.feminist.references.map(reference => this.references.append(`<li>${reference}</li>`));
+      this.feminist.references.map(reference => this.references.append(`<li>${Description.interpretReference(reference)}</li>`));
+    }
+  }
+
+  static interpretReference(reference) {
+    if (reference.match(/wikipedia\./)) {
+      return `<a href=${reference}>Wikipedia</a>`
+    } else {
+      return reference
     }
   }
 }
