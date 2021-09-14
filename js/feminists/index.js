@@ -6,6 +6,7 @@ import olympeDeGouges from "./olympeDeGouges";
 import roseScott from "./roseScott";
 import simoneDeBeauvoir from "./simoneDeBeauvoir";
 import virginiaWoolf from "./virginiaWoolf";
+import virginieDespentes from "./virginieDespentes";
 
 export default [
   christineDelphy,
@@ -16,4 +17,5 @@ export default [
   roseScott,
   simoneDeBeauvoir,
   virginiaWoolf,
+  virginieDespentes,
 ]
