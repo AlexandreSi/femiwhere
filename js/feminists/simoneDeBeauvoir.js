@@ -8,8 +8,6 @@ export default new Feminist("Simone de Beauvoir", [
     "year": 1908,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": 1986,
   },

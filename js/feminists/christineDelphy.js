@@ -20,14 +20,10 @@ export default new Feminist("Christine Delphy", [
     "year": 1965,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": 1968,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": "today",
   },

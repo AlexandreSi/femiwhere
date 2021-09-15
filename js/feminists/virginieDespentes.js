@@ -14,14 +14,10 @@ export default new Feminist("Virginie Despentes", [
     "year": 1988,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": 1992,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": "today",
   },

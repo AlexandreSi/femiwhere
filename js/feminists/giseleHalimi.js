@@ -8,14 +8,10 @@ export default new Feminist("Gisèle Halimi", [
     "year": 1927,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": 1945,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": 2020,
   },

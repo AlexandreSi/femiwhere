@@ -8,14 +8,10 @@ export default new Feminist("Olympe de Gouges", [
     "year": 1748,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": 1768,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": 1793,
   },

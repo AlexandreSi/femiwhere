@@ -1,3 +1,5 @@
+import commonLocations from "./commonLocations";
+
 const currentYear = new Date().getFullYear();
 
 const Feminist = class Feminist {
@@ -6,7 +8,9 @@ const Feminist = class Feminist {
     this.trajectory = trajectory.map(location => {
       return {
         ...location,
-        year: location.year === "today" ? currentYear : location.year
+        year: location.year === "today" ? currentYear : location.year,
+        latitude: location.latitude || commonLocations[location.title].latitude,
+        longitude: location.longitude || commonLocations[location.title].longitude,
       }
     });
     this.references = references || [];

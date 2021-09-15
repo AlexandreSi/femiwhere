@@ -8,8 +8,6 @@ export default new Feminist("Monique Wittig", [
     "year": 1935,
   },
   {
-    "latitude": 48.856396,
-    "longitude": 2.351880,
     "title": "Paris",
     "year": 1950,
   },
