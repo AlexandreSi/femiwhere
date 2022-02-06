@@ -1,6 +1,7 @@
 import benoiteGroult from "./benoiteGroult";
 import christineDelphy from "./christineDelphy";
 import elenaLagadinova from "./elenaLagadinova";
+import emilyMurphy from "./emilyMurphy";
 import gertyArchimede from "./gertyArchimede";
 import giseleHalimi from "./giseleHalimi";
 import moniqueWittig from "./moniqueWittig";
@@ -14,6 +15,7 @@ export default [
   benoiteGroult,
   christineDelphy,
   elenaLagadinova,
+  emilyMurphy,
   gertyArchimede,
   giseleHalimi,
   moniqueWittig,
