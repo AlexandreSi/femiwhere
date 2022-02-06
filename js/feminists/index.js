@@ -4,6 +4,7 @@ import elenaLagadinova from "./elenaLagadinova";
 import emilyMurphy from "./emilyMurphy";
 import gertyArchimede from "./gertyArchimede";
 import giseleHalimi from "./giseleHalimi";
+import ireneParlby from "./ireneParlby";
 import moniqueWittig from "./moniqueWittig";
 import olympeDeGouges from "./olympeDeGouges";
 import roseScott from "./roseScott";
@@ -18,6 +19,7 @@ export default [
   emilyMurphy,
   gertyArchimede,
   giseleHalimi,
+  ireneParlby,
   moniqueWittig,
   olympeDeGouges,
   roseScott,

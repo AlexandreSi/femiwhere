@@ -2,9 +2,7 @@ import Feminist from "../feminist"
 
 export default new Feminist("Virginia Woolf", [
   {
-    "latitude": 51.5088,
-    "longitude": -0.11753,
-    "title": "Londres",
+    "title": "London",
     "year": 1882,
   },
   {
