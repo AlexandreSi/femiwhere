@@ -6,6 +6,7 @@ import gertyArchimede from "./gertyArchimede";
 import giseleHalimi from "./giseleHalimi";
 import henriettaEdwards from "./henriettaEdwards";
 import ireneParlby from "./ireneParlby";
+import louiseMcKinney from "./louiseMcKinney";
 import moniqueWittig from "./moniqueWittig";
 import nellieMcClung from "./nellieMcClung";
 import olympeDeGouges from "./olympeDeGouges";
@@ -23,6 +24,7 @@ export default [
   giseleHalimi,
   henriettaEdwards,
   ireneParlby,
+  louiseMcKinney,
   moniqueWittig,
   nellieMcClung,
   olympeDeGouges,
