@@ -7,6 +7,7 @@ import giseleHalimi from "./giseleHalimi";
 import henriettaEdwards from "./henriettaEdwards";
 import ireneParlby from "./ireneParlby";
 import moniqueWittig from "./moniqueWittig";
+import nellieMcClung from "./nellieMcClung";
 import olympeDeGouges from "./olympeDeGouges";
 import roseScott from "./roseScott";
 import simoneDeBeauvoir from "./simoneDeBeauvoir";
@@ -23,6 +24,7 @@ export default [
   henriettaEdwards,
   ireneParlby,
   moniqueWittig,
+  nellieMcClung,
   olympeDeGouges,
   roseScott,
   simoneDeBeauvoir,
