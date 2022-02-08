@@ -54,7 +54,7 @@ const createImage = (imageSeries, feminist) => {
   return mapImage;
 }
 
-const creationLocationPoint = (imageSeries, location) => {
+const createLocationPoint = (imageSeries, location, year) => {
   const mapImage = imageSeries.mapImages.create();
   mapImage.latitude = location.latitude;
   mapImage.longitude = location.longitude;
@@ -66,7 +66,7 @@ const creationLocationPoint = (imageSeries, location) => {
   circle.stroke = am4core.color("#FFFFFF");
   circle.strokeWidth = 2;
   circle.nonScaling = true;
-  circle.title = `${location.title} (${location.year})`;
+  circle.title = `${location.title} (${year})`;
 
   circle.tooltipText = "{title}";
   return mapImage;
@@ -79,7 +79,24 @@ export const drawFeminists = (chart, feminists) => {
 
 export const drawTrajectory = (chart, feminist) => {
   let imageSeries = chart.series.push(new am4maps.MapImageSeries());
-  feminist.trajectory.map(location => creationLocationPoint(imageSeries, location))
+  let locationIndex = 0
+  while (locationIndex < feminist.trajectory.length) {
+    const location = feminist.trajectory[locationIndex];
+    if (locationIndex === feminist.trajectory.length - 1) {
+      // If last point of trajectory, create a point
+      createLocationPoint(imageSeries, location, location.year)
+      break;
+    }
+    if (feminist.trajectory[locationIndex].title === feminist.trajectory[locationIndex + 1].title) {
+      // If 2 successive points of the trajectory are the same place
+      // (usually for deaths at the same place as the last place move), merge 2 locations into one
+      createLocationPoint(imageSeries, location, `${location.year} - ${feminist.trajectory[locationIndex + 1].year}`)
+      locationIndex += 2;
+    } else {
+      createLocationPoint(imageSeries, location, location.year)
+      locationIndex += 1;
+    }
+  }
   let lineSeries = chart.series.push(new am4maps.MapArcSeries());
   lineSeries.data = [{
     "multiGeoLine": [
