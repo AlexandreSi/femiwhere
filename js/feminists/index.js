@@ -8,6 +8,7 @@ import giseleHalimi from "./giseleHalimi";
 import henriettaEdwards from "./henriettaEdwards";
 import ireneParlby from "./ireneParlby";
 import louiseMcKinney from "./louiseMcKinney";
+import marcelaLagarde from "./marcelaLagarde";
 import moniqueWittig from "./moniqueWittig";
 import nellieMcClung from "./nellieMcClung";
 import olympeDeGouges from "./olympeDeGouges";
@@ -27,6 +28,7 @@ export default [
   henriettaEdwards,
   ireneParlby,
   louiseMcKinney,
+  marcelaLagarde,
   moniqueWittig,
   nellieMcClung,
   olympeDeGouges,

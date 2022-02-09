@@ -2,8 +2,6 @@ import Feminist from "../feminist"
 
 export default new Feminist("Elena Arizmendi Mejia", [
   {
-    "latitude": 19.417982,
-    "longitude": -99.186661,
     "title": "Mexico City",
     "year": 1884,
   },
@@ -14,8 +12,6 @@ export default new Feminist("Elena Arizmendi Mejia", [
     "year": 1908,
   },
   {
-    "latitude": 19.417982,
-    "longitude": -99.186661,
     "title": "Mexico City",
     "year": 1911,
   },
@@ -26,14 +22,10 @@ export default new Feminist("Elena Arizmendi Mejia", [
     "year": 1916,
   },
   {
-    "latitude": 19.417982,
-    "longitude": -99.186661,
     "title": "Mexico City",
     "year": 1938,
   },
   {
-    "latitude": 19.417982,
-    "longitude": -99.186661,
     "title": "Mexico City",
     "year": 1949,
   },
