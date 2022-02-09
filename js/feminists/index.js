@@ -1,5 +1,6 @@
 import benoiteGroult from "./benoiteGroult";
 import christineDelphy from "./christineDelphy";
+import elenaArizmendiMejia from "./elenaArizmendiMejia";
 import elenaLagadinova from "./elenaLagadinova";
 import emilyMurphy from "./emilyMurphy";
 import gertyArchimede from "./gertyArchimede";
@@ -18,6 +19,7 @@ import virginieDespentes from "./virginieDespentes";
 export default [
   benoiteGroult,
   christineDelphy,
+  elenaArizmendiMejia,
   elenaLagadinova,
   emilyMurphy,
   gertyArchimede,
