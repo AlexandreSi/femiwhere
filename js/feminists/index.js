@@ -3,6 +3,7 @@ import christineDelphy from "./christineDelphy";
 import elenaArizmendiMejia from "./elenaArizmendiMejia";
 import elenaLagadinova from "./elenaLagadinova";
 import emilyMurphy from "./emilyMurphy";
+import fouziaAssouli from "./fouziaAssouli";
 import gertyArchimede from "./gertyArchimede";
 import giseleHalimi from "./giseleHalimi";
 import henriettaEdwards from "./henriettaEdwards";
@@ -23,6 +24,7 @@ export default [
   elenaArizmendiMejia,
   elenaLagadinova,
   emilyMurphy,
+  fouziaAssouli,
   gertyArchimede,
   giseleHalimi,
   henriettaEdwards,
