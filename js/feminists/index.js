@@ -13,6 +13,7 @@ import marcelaLagarde from "./marcelaLagarde";
 import moniqueWittig from "./moniqueWittig";
 import nellieMcClung from "./nellieMcClung";
 import olympeDeGouges from "./olympeDeGouges";
+import rabeaNaciri from "./rabeaNaciri";
 import roseScott from "./roseScott";
 import simoneDeBeauvoir from "./simoneDeBeauvoir";
 import virginiaWoolf from "./virginiaWoolf";
@@ -34,6 +35,7 @@ export default [
   moniqueWittig,
   nellieMcClung,
   olympeDeGouges,
+  rabeaNaciri,
   roseScott,
   simoneDeBeauvoir,
   virginiaWoolf,

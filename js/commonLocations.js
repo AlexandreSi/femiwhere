@@ -11,4 +11,5 @@ export default {
     latitude: 19.417982,
     longitude: -99.186661,
   },
+  Casablanca: { latitude: 33.587148, longitude: -7.623151 },
 };
