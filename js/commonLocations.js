@@ -16,4 +16,8 @@ export default {
     latitude: 41.890189,
     longitude: 12.486088,
   },
+  Istanbul: {
+    latitude: 41.013668,
+    longitude: 28.981503,
+  },
 };
