@@ -14,8 +14,6 @@ export default new Feminist("Elvira Banotti", [
     "year": 1960,
   },
   {
-    "latitude": 41.890189,
-    "longitude": 12.486088,
     "title": "Roma",
     "year": 1962,
   },

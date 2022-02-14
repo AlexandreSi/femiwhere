@@ -1,4 +1,5 @@
 import benoiteGroult from "./benoiteGroult";
+import carlaAccardi from "./carlaAccardi";
 import carlaLonzi from "./carlaLonzi";
 import christineDelphy from "./christineDelphy";
 import elenaArizmendiMejia from "./elenaArizmendiMejia";
@@ -23,6 +24,7 @@ import virginieDespentes from "./virginieDespentes";
 
 export default [
   benoiteGroult,
+  carlaAccardi,
   carlaLonzi,
   christineDelphy,
   elenaArizmendiMejia,
