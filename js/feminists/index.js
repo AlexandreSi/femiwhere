@@ -6,6 +6,7 @@ import elenaArizmendiMejia from "./elenaArizmendiMejia";
 import elenaLagadinova from "./elenaLagadinova";
 import elviraBanotti from "./elviraBanotti";
 import emilyMurphy from "./emilyMurphy";
+import fatmaAliyeTopuz from "./fatmaAliyeTopuz";
 import fouziaAssouli from "./fouziaAssouli";
 import gertyArchimede from "./gertyArchimede";
 import giseleHalimi from "./giseleHalimi";
@@ -31,6 +32,7 @@ export default [
   elenaLagadinova,
   elviraBanotti,
   emilyMurphy,
+  fatmaAliyeTopuz,
   fouziaAssouli,
   gertyArchimede,
   giseleHalimi,
