@@ -20,4 +20,5 @@ export default {
     latitude: 41.013668,
     longitude: 28.981503,
   },
+  Yaoundé: { latitude: 3.861267, longitude: 11.516103 },
 };
