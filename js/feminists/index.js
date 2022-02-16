@@ -25,6 +25,7 @@ import simoneDeBeauvoir from "./simoneDeBeauvoir";
 import thereseSitaBella from "./thereseSitaBella";
 import virginiaWoolf from "./virginiaWoolf";
 import virginieDespentes from "./virginieDespentes";
+import zainahAnwar from "./zainahAnwar";
 
 export default [
   benoiteGroult,
@@ -54,4 +55,5 @@ export default [
   thereseSitaBella,
   virginiaWoolf,
   virginieDespentes,
+  zainahAnwar,
 ]
