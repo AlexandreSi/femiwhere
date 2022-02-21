@@ -9,16 +9,17 @@ assignees: ''
 
 ### Who is she/he?
 
-__Monique Wittig__
+_Monique Wittig_
 
 ### Why she/he should be considered
 
-__Link to wikipedia page__
-__Other references__
+_Link to wikipedia page_
+_Other references_
 
 ### Where has she/he lived?
 
-__Example:__
+_Example:_
+
 - Born in Paris in 1934
 - Moved to London in 1956
 - Moved back to Paris in 1963
