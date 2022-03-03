@@ -7,7 +7,7 @@ export default {
     latitude: 51.5088,
     longitude: -0.11753,
   },
-  "Mexico City": {
+  'Mexico City': {
     latitude: 19.417982,
     longitude: -99.186661,
   },

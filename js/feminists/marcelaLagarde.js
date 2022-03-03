@@ -1,14 +1,14 @@
-import Feminist from "../feminist"
+import Feminist from '../feminist';
 
-export default new Feminist("Marcela Lagarde", [
+export default new Feminist('Marcela Lagarde', [
   {
-    "title": "Mexico City",
-    "year": 1948,
+    title: 'Mexico City',
+    year: 1948,
   },
   {
-    "title": "Mexico City",
-    "year": "today",
+    title: 'Mexico City',
+    year: 'today',
   },
 ], [
-  "https://en.wikipedia.org/wiki/Marcela_Lagarde",
-])
+  'https://en.wikipedia.org/wiki/Marcela_Lagarde',
+]);

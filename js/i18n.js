@@ -1,5 +1,5 @@
-import jqueryI18next from "jquery-i18next";
-import i18nextInstance from "i18next";
+import jqueryI18next from 'jquery-i18next';
+import i18nextInstance from 'i18next';
 
 import { getNavigatorLanguage } from './utils';
 
@@ -9,25 +9,25 @@ i18nextInstance.init({
     en: {
       translation: {
         app: {
-          title: "Find a feminist"
+          title: 'Find a feminist',
         },
-        slider:{
-          year: "Year"
-        }
-      }
+        slider: {
+          year: 'Year',
+        },
+      },
     },
     fr: {
       translation: {
         app: {
-          title: "En quête d'une féministe ?"
+          title: "En quête d'une féministe ?",
         },
-        slider:{
-          year: "Année"
-        }
-      }
-    }
-  }
-}, function(err, t) {
+        slider: {
+          year: 'Année',
+        },
+      },
+    },
+  },
+}, (err, t) => {
   jqueryI18next.init(i18nextInstance, $, {
     tName: 't', // --> appends $.t = i18next.t
     i18nName: 'i18n', // --> appends $.i18n = i18next
@@ -36,7 +36,7 @@ i18nextInstance.init({
     targetAttr: 'i18n-target', // data-() attribute to grab target element to translate (if different than itself)
     optionsAttr: 'i18n-options', // data-() attribute that contains options, will load/set if useOptionsAttr = true
     useOptionsAttr: false, // see optionsAttr
-    parseDefaultValueFromContent: true // parses default values from content ele.val or ele.text
+    parseDefaultValueFromContent: true, // parses default values from content ele.val or ele.text
   });
 
   $('body').localize();

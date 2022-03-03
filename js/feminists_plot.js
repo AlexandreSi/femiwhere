@@ -1,5 +1,5 @@
 import PubSub from 'pubsub-js';
-import {drawFeminists, drawTrajectory, zoomOnTrajectory} from "./map";
+import { drawFeminists, drawTrajectory, zoomOnTrajectory } from './map';
 
 export default class FeministsPlot {
   constructor(chart, feminists) {
@@ -8,12 +8,12 @@ export default class FeministsPlot {
     this.feministsOnYearView = drawFeminists(chart, feminists);
     this.currentFocus = null;
     this.currentYear = -9999;
-    PubSub.subscribe('time', this.onTimeEvent.bind(this))
-    PubSub.subscribe('map', this.onMapEvent.bind(this))
+    PubSub.subscribe('time', this.onTimeEvent.bind(this));
+    PubSub.subscribe('map', this.onMapEvent.bind(this));
   }
 
   byYearComparison() {
-    return feminist => (feminist.birthYear <= this.currentYear) && (feminist.deathYear >= this.currentYear)
+    return (feminist) => (feminist.birthYear <= this.currentYear) && (feminist.deathYear >= this.currentYear);
   }
 
   setCurrentYear(year) {
@@ -26,29 +26,29 @@ export default class FeministsPlot {
   }
 
   plotFeministsForCurrentYear() {
-    const feministsToDraw = this.feminists.filter(this.byYearComparison())
-    this.feministsOnYearView.map(element => {
+    const feministsToDraw = this.feminists.filter(this.byYearComparison());
+    this.feministsOnYearView.map((element) => {
       if (feministsToDraw.indexOf(element.feminist) >= 0) {
-        element.appear(200)
+        element.appear(200);
       } else {
-        element.hide(400)
+        element.hide(400);
       }
-    })
+    });
   }
 
   onMapEvent(queue, data) {
     if (data.event === 'focus') {
       const feministToFocus = data.object;
-      this.feministsOnYearView.map(element => element.hide(400))
-      this.currentFocus = drawTrajectory(this.chart, feministToFocus)
-      zoomOnTrajectory(this.chart, feministToFocus)
+      this.feministsOnYearView.map((element) => element.hide(400));
+      this.currentFocus = drawTrajectory(this.chart, feministToFocus);
+      zoomOnTrajectory(this.chart, feministToFocus);
     } else if (data.event === 'backToGlobalView') {
       this.chart.goHome();
-      this.currentFocus.map(series => {
+      this.currentFocus.map((series) => {
         this.chart.series.removeIndex(
-            this.chart.series.indexOf(series)
+          this.chart.series.indexOf(series),
         ).dispose();
-      })
+      });
       this.plotFeministsForCurrentYear();
     }
   }
