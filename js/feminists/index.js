@@ -23,6 +23,7 @@ import rabeaNaciri from './rabeaNaciri';
 import roseScott from './roseScott';
 import simoneDeBeauvoir from './simoneDeBeauvoir';
 import thereseSitaBella from './thereseSitaBella';
+import tranLeXuan from './tranLeXuan';
 import virginiaWoolf from './virginiaWoolf';
 import virginieDespentes from './virginieDespentes';
 import zainahAnwar from './zainahAnwar';
@@ -53,6 +54,7 @@ export default [
   roseScott,
   simoneDeBeauvoir,
   thereseSitaBella,
+  tranLeXuan,
   virginiaWoolf,
   virginieDespentes,
   zainahAnwar,
