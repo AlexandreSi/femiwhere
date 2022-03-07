@@ -22,6 +22,7 @@ import pinarSelek from './pinarSelek';
 import rabeaNaciri from './rabeaNaciri';
 import roseScott from './roseScott';
 import simoneDeBeauvoir from './simoneDeBeauvoir';
+import thereseClerc from './thereseClerc';
 import thereseSitaBella from './thereseSitaBella';
 import tranLeXuan from './tranLeXuan';
 import virginiaWoolf from './virginiaWoolf';
@@ -53,6 +54,7 @@ export default [
   rabeaNaciri,
   roseScott,
   simoneDeBeauvoir,
+  thereseClerc,
   thereseSitaBella,
   tranLeXuan,
   virginiaWoolf,
