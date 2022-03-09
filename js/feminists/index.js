@@ -14,6 +14,7 @@ import giseleHalimi from './giseleHalimi';
 import henriettaEdwards from './henriettaEdwards';
 import ireneParlby from './ireneParlby';
 import louiseMcKinney from './louiseMcKinney';
+import margareteBonnevie from './margareteBonnevie';
 import marcelaLagarde from './marcelaLagarde';
 import moniqueWittig from './moniqueWittig';
 import nellieMcClung from './nellieMcClung';
@@ -46,6 +47,7 @@ export default [
   henriettaEdwards,
   ireneParlby,
   louiseMcKinney,
+  margareteBonnevie,
   marcelaLagarde,
   moniqueWittig,
   nellieMcClung,
