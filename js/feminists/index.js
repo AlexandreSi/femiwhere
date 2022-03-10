@@ -11,6 +11,7 @@ import fatmaAliyeTopuz from './fatmaAliyeTopuz';
 import fouziaAssouli from './fouziaAssouli';
 import gertyArchimede from './gertyArchimede';
 import giseleHalimi from './giseleHalimi';
+import halehAfshar from './halehAfshar';
 import henriettaEdwards from './henriettaEdwards';
 import ireneParlby from './ireneParlby';
 import louiseMcKinney from './louiseMcKinney';
@@ -44,6 +45,7 @@ export default [
   fouziaAssouli,
   gertyArchimede,
   giseleHalimi,
+  halehAfshar,
   henriettaEdwards,
   ireneParlby,
   louiseMcKinney,
