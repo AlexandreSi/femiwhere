@@ -1,3 +1,4 @@
+import annaSandstrom from './annaSandstrom';
 import benoiteGroult from './benoiteGroult';
 import carlaAccardi from './carlaAccardi';
 import carlaLonzi from './carlaLonzi';
@@ -32,6 +33,7 @@ import virginieDespentes from './virginieDespentes';
 import zainahAnwar from './zainahAnwar';
 
 export default [
+  annaSandstrom,
   benoiteGroult,
   carlaAccardi,
   carlaLonzi,
