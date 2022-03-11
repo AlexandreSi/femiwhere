@@ -16,6 +16,7 @@ import halehAfshar from './halehAfshar';
 import henriettaEdwards from './henriettaEdwards';
 import ireneParlby from './ireneParlby';
 import louiseMcKinney from './louiseMcKinney';
+import malakHifniNasif from './malakHifniNasif';
 import margareteBonnevie from './margareteBonnevie';
 import marcelaLagarde from './marcelaLagarde';
 import moniqueWittig from './moniqueWittig';
@@ -51,6 +52,7 @@ export default [
   henriettaEdwards,
   ireneParlby,
   louiseMcKinney,
+  malakHifniNasif,
   margareteBonnevie,
   marcelaLagarde,
   moniqueWittig,
