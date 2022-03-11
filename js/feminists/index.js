@@ -30,6 +30,7 @@ import simoneDeBeauvoir from './simoneDeBeauvoir';
 import thereseClerc from './thereseClerc';
 import thereseSitaBella from './thereseSitaBella';
 import tranLeXuan from './tranLeXuan';
+import vandanaShiva from './vandanaShiva';
 import virginiaWoolf from './virginiaWoolf';
 import virginieDespentes from './virginieDespentes';
 import zainahAnwar from './zainahAnwar';
@@ -67,6 +68,7 @@ export default [
   thereseClerc,
   thereseSitaBella,
   tranLeXuan,
+  vandanaShiva,
   virginiaWoolf,
   virginieDespentes,
   zainahAnwar,
