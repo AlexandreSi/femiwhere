@@ -22,6 +22,7 @@ import margareteBonnevie from './margareteBonnevie';
 import marcelaLagarde from './marcelaLagarde';
 import moniqueWittig from './moniqueWittig';
 import nellieMcClung from './nellieMcClung';
+import olgaLipovskaia from './olgaLipovskaia';
 import olympeDeGouges from './olympeDeGouges';
 import pinarSelek from './pinarSelek';
 import rabeaNaciri from './rabeaNaciri';
@@ -60,6 +61,7 @@ export default [
   marcelaLagarde,
   moniqueWittig,
   nellieMcClung,
+  olgaLipovskaia,
   olympeDeGouges,
   pinarSelek,
   rabeaNaciri,
