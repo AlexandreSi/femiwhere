@@ -21,6 +21,10 @@ export default {
     longitude: 28.981503,
   },
   Yaoundé: { latitude: 3.861267, longitude: 11.516103 },
+  Johannesburg: {
+    latitude: -26.187444,
+    longitude: 28.031204,
+  },
   'New York City': {
     latitude: 40.780732,
     longitude: -73.967247,

@@ -15,6 +15,7 @@ import giseleHalimi from './giseleHalimi';
 import halehAfshar from './halehAfshar';
 import henriettaEdwards from './henriettaEdwards';
 import ireneParlby from './ireneParlby';
+import joycePilisoSeroke from './joycePilisoSeroke';
 import louiseMcKinney from './louiseMcKinney';
 import lindseyCollen from './lindseyCollen';
 import malakHifniNasif from './malakHifniNasif';
@@ -55,6 +56,7 @@ export default [
   halehAfshar,
   henriettaEdwards,
   ireneParlby,
+  joycePilisoSeroke,
   louiseMcKinney,
   lindseyCollen,
   malakHifniNasif,

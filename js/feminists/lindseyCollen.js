@@ -8,8 +8,6 @@ export default new Feminist('Lindsey Collen', [
     year: 1948,
   },
   {
-    latitude: -26.187444,
-    longitude: 28.031204,
     title: 'Johannesburg',
     year: 1965,
   },
@@ -18,8 +16,6 @@ export default new Feminist('Lindsey Collen', [
     year: 1967,
   },
   {
-    latitude: -26.187444,
-    longitude: 28.031204,
     title: 'Johannesburg',
     year: 1968,
   },
