@@ -16,8 +16,6 @@ export default new Feminist('Elena Arizmendi Mejia', [
     year: 1911,
   },
   {
-    latitude: 40.780732,
-    longitude: -73.967247,
     title: 'New York City',
     year: 1916,
   },
