@@ -5,6 +5,7 @@ class Slider {
     this.slider = $('#time');
     this.yearDisplay = $('#year-display');
     this.slider.on('input', (event) => this.onChangeYear(event.target.value));
+    this.slider.attr({ max: new Date().getFullYear() });
     PubSub.subscribe('start', this.onChartReady.bind(this));
   }
 
