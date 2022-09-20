@@ -29,4 +29,8 @@ module.exports = {
     latitude: 40.780732,
     longitude: -73.967247,
   },
+  'San Francisco': {
+    latitude: 37.769096,
+    longitude: -122.484979,
+  },
 };

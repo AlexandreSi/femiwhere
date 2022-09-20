@@ -2,6 +2,7 @@ const annaSandstrom = require('./annaSandstrom');
 const benoiteGroult = require('./benoiteGroult');
 const carlaAccardi = require('./carlaAccardi');
 const carlaLonzi = require('./carlaLonzi');
+const carolLeigh = require('./carolLeigh');
 const carolQueen = require('./carolQueen');
 const christineDelphy = require('./christineDelphy');
 const delphineZangaTsogo = require('./delphineZangaTsogo');
@@ -44,6 +45,7 @@ module.exports = [
   benoiteGroult,
   carlaAccardi,
   carlaLonzi,
+  carolLeigh,
   carolQueen,
   christineDelphy,
   delphineZangaTsogo,
