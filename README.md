@@ -1,5 +1,7 @@
 # femiwhere
 
+[Link to the map](https://alexandresi.github.io/femiwhere/)
+
 Looking for someone inspiring, fighting against patriarchy? This might be the one project to search into.
 
 ![preview](./doc/screenshot.png)
