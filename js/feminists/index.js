@@ -11,6 +11,7 @@ const elenaLagadinova = require('./elenaLagadinova');
 const elviraBanotti = require('./elviraBanotti');
 const emilyMurphy = require('./emilyMurphy');
 const fatmaAliyeTopuz = require('./fatmaAliyeTopuz');
+const florynceKennedy = require('./florynceKennedy');
 const fouziaAssouli = require('./fouziaAssouli');
 const gertyArchimede = require('./gertyArchimede');
 const giseleHalimi = require('./giseleHalimi');
@@ -55,6 +56,7 @@ module.exports = [
   elviraBanotti,
   emilyMurphy,
   fatmaAliyeTopuz,
+  florynceKennedy,
   fouziaAssouli,
   gertyArchimede,
   giseleHalimi,
