@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,SACE,YACF,CAEA,gBACE,WACF,CAEA,MACE,UACF,CAEA,eACE,YACF","file":"css.bd6f84d1.css","sourceRoot":"..","sourcesContent":["#map-div {\n  height: 600px;\n}\n\n.slidecontainer {\n  width: 500px;\n}\n\n#time {\n  width: 100%;\n}\n\n#description > a {\n  display: none;\n}\n"]}
