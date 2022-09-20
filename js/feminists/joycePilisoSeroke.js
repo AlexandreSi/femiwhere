@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Joyce Piliso-Seroke', [
+module.exports = new Feminist('Joyce Piliso-Seroke', [
   {
     title: 'Johannesburg',
     year: 1933,

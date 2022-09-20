@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Anna Sandström', [
+module.exports = new Feminist('Anna Sandström', [
   {
     latitude: 59.327011,
     longitude: 18.118928,

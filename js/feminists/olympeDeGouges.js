@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Olympe de Gouges', [
+module.exports = new Feminist('Olympe de Gouges', [
   {
     latitude: 44.014616,
     longitude: 1.353455,

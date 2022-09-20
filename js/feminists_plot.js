@@ -1,7 +1,7 @@
-import PubSub from 'pubsub-js';
-import { drawFeminists, drawTrajectory, zoomOnTrajectory } from './map';
+const PubSub = require('pubsub-js');
+const { drawFeminists, drawTrajectory, zoomOnTrajectory } = require('./map');
 
-export default class FeministsPlot {
+module.exports = class FeministsPlot {
   constructor(chart, feminists) {
     this.chart = chart;
     this.feminists = feminists;
@@ -13,11 +13,12 @@ export default class FeministsPlot {
   }
 
   byYearComparison() {
-    return (feminist) => (feminist.birthYear <= this.currentYear) && (feminist.deathYear >= this.currentYear);
+    return (feminist) => feminist.birthYear <= this.currentYear
+      && feminist.deathYear >= this.currentYear;
   }
 
   setCurrentYear(year) {
-    this.currentYear = parseInt(year);
+    this.currentYear = parseInt(year, 10);
   }
 
   onTimeEvent(queue, year) {
@@ -27,7 +28,7 @@ export default class FeministsPlot {
 
   plotFeministsForCurrentYear() {
     const feministsToDraw = this.feminists.filter(this.byYearComparison());
-    this.feministsOnYearView.map((element) => {
+    this.feministsOnYearView.forEach((element) => {
       if (feministsToDraw.indexOf(element.feminist) >= 0) {
         element.appear(200);
       } else {
@@ -45,11 +46,11 @@ export default class FeministsPlot {
     } else if (data.event === 'backToGlobalView') {
       this.chart.goHome();
       this.currentFocus.map((series) => {
-        this.chart.series.removeIndex(
-          this.chart.series.indexOf(series),
-        ).dispose();
+        this.chart.series
+          .removeIndex(this.chart.series.indexOf(series))
+          .dispose();
       });
       this.plotFeministsForCurrentYear();
     }
   }
-}
+};

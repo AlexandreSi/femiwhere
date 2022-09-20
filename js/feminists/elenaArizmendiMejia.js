@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Elena Arizmendi Mejia', [
+module.exports = new Feminist('Elena Arizmendi Mejia', [
   {
     title: 'Mexico City',
     year: 1884,

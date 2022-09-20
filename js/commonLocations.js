@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   Paris: {
     latitude: 48.856396,
     longitude: 2.35188,

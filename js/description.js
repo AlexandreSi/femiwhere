@@ -1,4 +1,4 @@
-import PubSub from 'pubsub-js';
+const PubSub = require('pubsub-js');
 
 class Description {
   constructor() {
@@ -12,7 +12,10 @@ class Description {
     this.focusButton.on('click', this.onClickFocusButton.bind(this));
     this.backToGlobalViewButton = description.find('#back-to-global-view');
     this.backToGlobalViewButton.hide();
-    this.backToGlobalViewButton.on('click', this.onClickBackToGlobalViewButton.bind(this));
+    this.backToGlobalViewButton.on(
+      'click',
+      this.onClickBackToGlobalViewButton.bind(this),
+    );
   }
 
   onClickFocusButton(event) {
@@ -35,7 +38,9 @@ class Description {
       this.focusButton.show();
       this.name.text(this.feminist.name);
       this.references.html('');
-      this.feminist.references.map((reference) => this.references.append(`<li>${Description.interpretReference(reference)}</li>`));
+      this.feminist.references.map((reference) => this.references.append(
+        `<li>${Description.interpretReference(reference)}</li>`,
+      ));
     }
   }
 

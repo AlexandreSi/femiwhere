@@ -1,4 +1,4 @@
-import PubSub from 'pubsub-js';
+const PubSub = require('pubsub-js');
 
 class Slider {
   constructor() {

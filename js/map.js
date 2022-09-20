@@ -1,15 +1,14 @@
-import * as am4core from '@amcharts/amcharts4/core';
-import * as am4maps from '@amcharts/amcharts4/maps';
-import am4geodata_worldHigh from '@amcharts/amcharts4-geodata/worldHigh';
-import PubSub from 'pubsub-js';
+const am4core = require('@amcharts/amcharts4/core');
+const am4maps = require('@amcharts/amcharts4/maps');
+const {
+  default: am4GeodataWorldHigh,
+} = require('@amcharts/amcharts4-geodata/worldHigh');
+const PubSub = require('pubsub-js');
 
 export const createChart = () => {
-  const chart = am4core.create(
-    'map-div',
-    am4maps.MapChart,
-  );
+  const chart = am4core.create('map-div', am4maps.MapChart);
   chart.projection = new am4maps.projections.Miller();
-  chart.geodata = am4geodata_worldHigh;
+  chart.geodata = am4GeodataWorldHigh;
   chart.maxZoomLevel = 512;
   chart.zoomEasing = am4core.ease.linear;
 
@@ -86,10 +85,17 @@ export const drawTrajectory = (chart, feminist) => {
       createLocationPoint(imageSeries, location, location.year);
       break;
     }
-    if (feminist.trajectory[locationIndex].title === feminist.trajectory[locationIndex + 1].title) {
+    if (
+      feminist.trajectory[locationIndex].title
+      === feminist.trajectory[locationIndex + 1].title
+    ) {
       // If 2 successive points of the trajectory are the same place
       // (usually for deaths at the same place as the last place move), merge 2 locations into one
-      createLocationPoint(imageSeries, location, `${location.year} - ${feminist.trajectory[locationIndex + 1].year}`);
+      createLocationPoint(
+        imageSeries,
+        location,
+        `${location.year} - ${feminist.trajectory[locationIndex + 1].year}`,
+      );
       locationIndex += 2;
     } else {
       createLocationPoint(imageSeries, location, location.year);
@@ -97,27 +103,30 @@ export const drawTrajectory = (chart, feminist) => {
     }
   }
   const lineSeries = chart.series.push(new am4maps.MapArcSeries());
-  lineSeries.data = [{
-    multiGeoLine: [
-      feminist.trajectory,
-    ],
-  }];
+  lineSeries.data = [
+    {
+      multiGeoLine: [feminist.trajectory],
+    },
+  ];
   lineSeries.mapLines.template.line.controlPointDistance = 0.3;
   return [imageSeries, lineSeries];
 };
 
 export const zoomOnTrajectory = (chart, feminist) => {
-  const boundaries = feminist.trajectory.reduce((acc, location) => ({
-    northest: Math.max(acc.northest, location.latitude),
-    eastest: Math.max(acc.eastest, location.longitude),
-    westest: Math.min(acc.westest, location.longitude),
-    southest: Math.min(acc.southest, location.latitude),
-  }), {
-    northest: feminist.trajectory[0].latitude,
-    eastest: feminist.trajectory[0].longitude,
-    westest: feminist.trajectory[0].longitude,
-    southest: feminist.trajectory[0].latitude,
-  });
+  const boundaries = feminist.trajectory.reduce(
+    (acc, location) => ({
+      northest: Math.max(acc.northest, location.latitude),
+      eastest: Math.max(acc.eastest, location.longitude),
+      westest: Math.min(acc.westest, location.longitude),
+      southest: Math.min(acc.southest, location.latitude),
+    }),
+    {
+      northest: feminist.trajectory[0].latitude,
+      eastest: feminist.trajectory[0].longitude,
+      westest: feminist.trajectory[0].longitude,
+      southest: feminist.trajectory[0].latitude,
+    },
+  );
   const latitudeEpsilon = Math.abs(boundaries.northest - boundaries.southest) * 0.05;
   const longitudeEpsilon = Math.abs(boundaries.eastest - boundaries.westest) * 0.05;
   chart.zoomToRectangle(

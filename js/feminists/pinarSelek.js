@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Pınar Selek', [
+module.exports = new Feminist('Pınar Selek', [
   {
     title: 'Istanbul',
     year: 1971,

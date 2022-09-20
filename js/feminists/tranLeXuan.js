@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Trần Lệ Xuân', [
+module.exports = new Feminist('Trần Lệ Xuân', [
   {
     title: 'Hanoi',
     year: 1924,

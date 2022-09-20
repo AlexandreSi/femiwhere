@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Thérèse Sita-Bella', [
+module.exports = new Feminist('Thérèse Sita-Bella', [
   {
     title: 'Yaoundé',
     year: 1933,

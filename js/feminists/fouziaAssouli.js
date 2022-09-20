@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Fouzia Assouli', [
+module.exports = new Feminist('Fouzia Assouli', [
   {
     title: 'Casablanca',
     year: 1958,

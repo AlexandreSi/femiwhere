@@ -1,12 +1,11 @@
-import FeministsPlot from './feminists_plot';
-import Feminist from './feminist';
-import { createChart } from './map';
-import feminists from './feminists';
-import './i18n';
-import './description';
-import './slider';
-import './languageSelector';
-import './utils';
+const FeministsPlot = require('./feminists_plot');
+const { createChart } = require('./map');
+const feminists = require('./feminists');
+require('./i18n');
+require('./description');
+require('./slider');
+require('./languageSelector');
+require('./utils');
 
 const chart = createChart();
-const feministsPlot = new FeministsPlot(chart, feminists);
+new FeministsPlot(chart, feminists);

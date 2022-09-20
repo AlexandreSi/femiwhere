@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Irene Parlby', [
+module.exports = new Feminist('Irene Parlby', [
   {
     title: 'London',
     year: 1868,

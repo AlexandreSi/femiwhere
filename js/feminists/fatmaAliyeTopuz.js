@@ -1,6 +1,6 @@
-import Feminist from '../feminist';
+const Feminist = require('../feminist');
 
-export default new Feminist('Fatma Aliye Topuz', [
+module.exports = new Feminist('Fatma Aliye Topuz', [
   {
     title: 'Istanbul',
     year: 1862,
