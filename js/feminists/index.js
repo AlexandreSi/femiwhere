@@ -22,6 +22,7 @@ const ireneParlby = require('./ireneParlby');
 const joycePilisoSeroke = require('./joycePilisoSeroke');
 const louiseMcKinney = require('./louiseMcKinney');
 const lindseyCollen = require('./lindseyCollen');
+const livStromquist = require('./livStromquist');
 const malakHifniNasif = require('./malakHifniNasif');
 const manasiPradhan = require('./manasiPradhan');
 const margoStJames = require('./margoStJames');
@@ -68,6 +69,7 @@ module.exports = [
   joycePilisoSeroke,
   louiseMcKinney,
   lindseyCollen,
+  livStromquist,
   malakHifniNasif,
   manasiPradhan,
   margoStJames,
