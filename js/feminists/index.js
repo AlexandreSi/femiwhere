@@ -1,4 +1,5 @@
 const annaSandstrom = require('./annaSandstrom');
+const bellHooks = require('./bellHooks');
 const benoiteGroult = require('./benoiteGroult');
 const carlaAccardi = require('./carlaAccardi');
 const carlaLonzi = require('./carlaLonzi');
@@ -44,6 +45,7 @@ const zainahAnwar = require('./zainahAnwar');
 
 module.exports = [
   annaSandstrom,
+  bellHooks,
   benoiteGroult,
   carlaAccardi,
   carlaLonzi,
