@@ -29,6 +29,7 @@ const margoStJames = require('./margoStJames');
 const margareteBonnevie = require('./margareteBonnevie');
 const marcelaLagarde = require('./marcelaLagarde');
 const marieLouiseBougle = require('./marieLouiseBougle');
+const martheBray = require('./martheBray');
 const moniqueWittig = require('./moniqueWittig');
 const nellieMcClung = require('./nellieMcClung');
 const olgaLipovskaia = require('./olgaLipovskaia');
@@ -77,6 +78,7 @@ module.exports = [
   margareteBonnevie,
   marcelaLagarde,
   marieLouiseBougle,
+  martheBray,
   moniqueWittig,
   nellieMcClung,
   olgaLipovskaia,
