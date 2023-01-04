@@ -18,6 +18,7 @@ const gertyArchimede = require('./gertyArchimede');
 const giseleHalimi = require('./giseleHalimi');
 const halehAfshar = require('./halehAfshar');
 const henriettaEdwards = require('./henriettaEdwards');
+const hubertineAuclert = require('./hubertineAuclert');
 const ireneParlby = require('./ireneParlby');
 const joycePilisoSeroke = require('./joycePilisoSeroke');
 const louiseMcKinney = require('./louiseMcKinney');
@@ -67,6 +68,7 @@ module.exports = [
   giseleHalimi,
   halehAfshar,
   henriettaEdwards,
+  hubertineAuclert,
   ireneParlby,
   joycePilisoSeroke,
   louiseMcKinney,
